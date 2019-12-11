@@ -1,2 +1,2 @@
 # sinavProje
-Yazılım Sınama Proje
+Yazılım Sınava Dersi Proje Ödevi
