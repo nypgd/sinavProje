@@ -1,0 +1,2 @@
+# sinavProje
+Yazılım Sınama Proje
