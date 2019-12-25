@@ -52,9 +52,11 @@ namespace sinavOtomasyon
                 }                
                 baglanti.Close();
             }
+          
 
-            if (!string.IsNullOrEmpty(comboBox1.Text))//veri tabanından hiçbir değer gelmiyorsa listeleme dedik
+            if (comboBox1.Items.Count!=0)//veri tabanından hiçbir değer gelmiyorsa listeleme dedik
             {
+
                 comboBox1.SelectedIndex = 0;
             }
 
@@ -64,7 +66,7 @@ namespace sinavOtomasyon
         public void konuListeleme(string ders)
         {
             this.chart1.Series["Başarı"].Points.Clear();
-            comboBox1.Items.Clear();            
+            //comboBox1.Items.Clear();            
             baglanti.Open();
             SqlCommand komut = new SqlCommand("select distinct konu.konuAdi from ogrenci,konu where ogrenci.dersId=(select dersId from ders where dersAdi='"+ders+ "') and ogrenci.quizId=(select quizId from quiz where quizAdi='"+ comboBox1.Text + "') and konu.konuId=ogrenci.konuId", baglanti);                  
             SqlDataReader dr = komut.ExecuteReader();
@@ -85,7 +87,7 @@ namespace sinavOtomasyon
                    
                 }
 
-                // MessageBox.Show(soruAdet(k).ToString()+","+ dogrusoruAdet(k));
+               
                 
             }
             konuAdi.Clear();//çok önemli konu array ini her seferinde boşlatmamız gerekiyor çünkü üzerine ekliyor
@@ -96,7 +98,6 @@ namespace sinavOtomasyon
         int kacSoruvar;
         public int soruAdet(int n)
         {
-
 
             baglanti.Open();
             SqlCommand komut = new SqlCommand("select count(*) from ogrenci,konu where ogrenci.dersId=(select dersId from ders where dersAdi='" + dataGridView1.Rows[secilen].Cells[0].Value.ToString() + "') and ogrenci.quizId=(select quizId from quiz where quizAdi='" + comboBox1.Text + "') and konu.konuId=ogrenci.konuId and konuAdi='" + konuAdi[n] + "'", baglanti);
@@ -170,8 +171,8 @@ namespace sinavOtomasyon
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {          
-
+        {
+            
             this.chart1.Titles.Clear();           
             this.chart1.Titles.Add(dataGridView1.Rows[secilen].Cells[0].Value.ToString());
 
@@ -181,7 +182,10 @@ namespace sinavOtomasyon
             }
 
             konuListeleme(dataGridView1.Rows[secilen].Cells[0].Value.ToString());
-            comboQuizListeleme();
+
+           
+
+
 
 
 
@@ -203,13 +207,11 @@ namespace sinavOtomasyon
                 this.chart1.Series["Başarı"].Points.Clear();
             }
 
-            //basariYuzdesi(int.Parse(comboBox1.Items[j].ToString()))
+           
             for (int j = 0; j < comboBox1.Items.Count; j++)
             {                
                 this.chart1.Series["Başarı"].Points.AddXY(comboBox1.Items[j].ToString(), basariYuzdesi(comboBox1.Items[j].ToString()));
-            }
-       
-            
+            }           
 
 
         }

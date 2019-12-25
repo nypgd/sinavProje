@@ -117,18 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="sayi.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
-        TUUH4QMYCxchhn4cDgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACgSURBVDhP
-        pVNbDoMwDMthEJvUY/KFtn1zsolyms7eAkq7slWNJaM2dh5AK08JQ5RLBCdpBL3MYS43TE7KWT2noMf4
-        415tD5A39X6BWuH9TI2FrZo2Ge9vwYAx6wHzaRHIqq9yfagkXFsNrE9Z6bIoj1htugyVbgftVD8Bc9ZV
-        uaj8HzQXye0FXK/g+ogQ+38jAv0HCQvfUcbDd5l81zkMLzS/9Ll23X+MAAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
